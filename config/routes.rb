@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  root 'new_user_path'
   resources :attendances
   resources :events
   resources :users
