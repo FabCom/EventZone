@@ -7,7 +7,8 @@ class Event < ApplicationRecord
   validates :administrator, presence:true
 
   belongs_to :administrator, class_name: "User"
-  has_many :participants, through: :attendances
+  has_many :attendances
+  has_many :participants, through: :attendances, class_name: "User"
 
   private
 
@@ -17,3 +18,4 @@ class Event < ApplicationRecord
     end
   end 
 end
+ 

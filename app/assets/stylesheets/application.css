@@ -15,3 +15,23 @@
  */
  body { box-sizing: border-box; font-family: 'Zen Maru Gothic', sans-serif; margin: 0; padding: 0;}
  *, *:before, *:after { box-sizing: inherit; margin: 0; padding: 0; }
+ body{
+  min-height: 100vh;
+}
+
+.card {
+  margin: 2em;
+}
+
+.btn-primary:visited {
+  color: #ffffff !important;
+}
+.btn-info:visited {
+  color: #ffffff !important;
+}
+.btn-danger:visited {
+  color: #ffffff !important;
+}
+.btn-success:visited {
+  color: #ffffff !important;
+}

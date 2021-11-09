@@ -1,2 +1,6 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="d-flex justify-content-center">
+  <h1 class="display-3">LES ÉVÉNEMENTS DU MOIS À VENIR...</h1>
+  <%= if user_signed_in? then link_to 'CRÉER', new_event_path end%>
+</div>
+
+<%= render "events/list" %>
