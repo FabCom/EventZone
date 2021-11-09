@@ -66,3 +66,4 @@ gem 'faker' #génération de données fictives
 gem 'table_print' #affichages de table dans le terminal
 gem 'simple_form' #gestion des formulaires frontend
 gem 'dotenv-rails'
+gem 'devise'
