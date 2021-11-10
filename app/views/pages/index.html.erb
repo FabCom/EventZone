@@ -1,6 +1,21 @@
+  <section class="py-5 mb-5 text-center container-fluid text-white bg-dark" style="width:100%">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">EVENT ZONE</h1>
+        <p class="lead text-muted">PARTICIPEZ À L'ANIMATION DE VOTRE ZONE !</p>
+        <p>
+          <%= unless user_signed_in? then link_to "S'INSCRIRE POUR PARTICIPER", new_user_registration_path, class: "btn btn-primary" end%>
+          <%= if user_signed_in? then link_to 'CRÉER UN ÉVÉNEMENT', new_event_path, class: "btn btn-primary" end%>
+        </p>
+      </div>
+    </div>
+  </section>
+
 <div class="d-flex justify-content-center">
   <h1 class="display-3">LES ÉVÉNEMENTS DU MOIS À VENIR...</h1>
-  <%= if user_signed_in? then link_to 'CRÉER', new_event_path end%>
 </div>
+  <div class="d-flex justify-content-center ms-4">
+     <%= if user_signed_in? then link_to 'VOIR TOUS LES ÉVÉNEMENTS', events_path, class: "btn btn-primary" end%>
+  </div>
 
 <%= render "events/list" %>

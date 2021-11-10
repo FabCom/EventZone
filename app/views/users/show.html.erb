@@ -1,29 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="card text-center">
+  <div class="card-header">
+    <h3>PROFIL</h3>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><strong><%= @user.first_name %> <%= @user.last_name %></strong></h5>
+    <p><%= @user.email %></p>
+    <p class="card-text"><%= @user.description %></p>
+    <%= link_to 'Edit', edit_user_registration_path(@user), class: "btn btn-primary" %>
+  </div>
+  <div class="card-footer text-muted">
+    Profil créé le <%= @user.created_at.strftime("%d/%m/%Y") %>
+  </div>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Encrypted password:</strong>
-  <%= @user.encrypted_password %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @user.description %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= render "events/list" %>

@@ -21,11 +21,15 @@ city = [{name: "Paris", zip_code: "75000"},{name: "Lyon", zip_code: "69000"},{na
 end
 
 10.times do
-  Event.create(start_date: Faker::Date.forward(days: 365), duration: [60,90,120,240].sample(1).first, title: Faker::Lorem.paragraph_by_chars(number: rand(5..140)), description: Faker::Lorem.paragraph_by_chars(number: rand(300..500)), price: [0,5,10,15,20].sample(1).first, administrator: User.all.sample(1).first, location: city.sample(1).first[:name])
+  Event.create(start_date: Faker::Date.forward(days: 365), duration: [60,90,120,240].sample(1).first, title: Faker::Hipster.sentences.sample, description: Faker::Lorem.paragraph_by_chars(number: rand(300..500)), price: [0,5,10,15,20].sample(1).first, administrator: User.all.sample(1).first, location: city.sample(1).first[:name])
+end
+
+5.times do
+  Event.create(start_date: Faker::Date.forward(days: 30), duration: [60,90,120,240].sample(1).first, title: Faker::Hipster.sentences.sample, description: Faker::Lorem.paragraph_by_chars(number: rand(300..500)), price: [0,5,10,15,20].sample(1).first, administrator: User.all.sample(1).first, location: city.sample(1).first[:name])
 end
 
 10.times do
-  Event.create(start_date: Faker::Date.backward(days: 365), duration: [60,90,120,240].sample(1).first, title: Faker::Lorem.paragraph_by_chars(number: rand(5..140)), description: Faker::Lorem.paragraph_by_chars(number: rand(300..500)), price: [0,5,10,15,20].sample(1).first, administrator: User.all.sample(1).first, location: city.sample(1).first[:name])
+  Event.create(start_date: Faker::Date.backward(days: 365), duration: [60,90,120,240].sample(1).first, title: Faker::Hipster.sentences.sample, description: Faker::Lorem.paragraph_by_chars(number: rand(300..500)), price: [0,5,10,15,20].sample(1).first, administrator: User.all.sample(1).first, location: city.sample(1).first[:name])
 end
 
 Event.all.each do |event|
