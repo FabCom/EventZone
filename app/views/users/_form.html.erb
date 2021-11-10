@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center mt-5" >
-  <div class="d-flex justify-content-center mt-5 border border-primary rounded  p-3" style="">
+<div class="d-flex justify-content-center" >
+  <div class="d-flex justify-content-center">
       <%= simple_form_for(@user) do |f| %>
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -11,7 +11,7 @@
         <%= f.input :description , label: "Description" %>
       </div>
 
-      <div class="form-actions d-flex justify-content-center">
+      <div class="form-actions d-flex justify-content-center mt-3">
          <%= f.button :submit , value: "Valider", class: 'btn btn-primary' %>
       </div>
       <% end %>
