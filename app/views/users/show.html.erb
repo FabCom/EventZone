@@ -4,6 +4,7 @@
   </div>
   <div class="card-body">
     <h5 class="card-title"><strong><%= @user.first_name %> <%= @user.last_name %></strong></h5>
+    <%= if @user.avatar.attached? then image_tag(@user.avatar, :width => 200) else "Ajouter un avatar..." end %>
     <p><%= @user.email %></p>
     <p class="card-text"><%= @user.description %></p>
     <%= link_to 'Edit', edit_user_registration_path(@user), class: "btn btn-primary" %>
